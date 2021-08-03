@@ -1,0 +1,11 @@
+{
+  "name": "fredericbeucher_3_03082021",
+  "version": "1.0.0",
+  "description": "Projet OC. Dynamiser une application web.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch main.scss:style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

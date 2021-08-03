@@ -5,27 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
+    <script src="https://kit.fontawesome.com/c69d84bd8b.js"></script>
+
     <link rel="shortcut icon" href="images/logo/oh.png">
     <title>Ohmyfood</title>
 </head>
 <body>
 
+    <!-- Bloc titre commun à chaque page -->
     <header>
-        <div>
+        <nav>
             <h1>ohmyfood</h1>
-        </div>
+        </nav>
     </header>
 
-    <section>
-        <h3><i class="logo localisation"></i> Paris, Belleville</h3>
+    <!-- Localisation -->
+    <section class="local">
+        <h3><i class="fas fa-map-marker-alt"></i> Paris, Belleville</h3>
     </section>
 
-    <section>
+    <!-- Sous-titre et lien des restos -->
+    <section class="reservez">
         <h2>Réservez le menu qui<br>vous convient</h2>
         <p>Découvrez des restaurant d'exeption, sélectionnés par nos soins</p>
-        <a href="restos" class="btn">Explorez nos restaurants</a>
+        <a href="restos" class="btn">Explorer nos restaurants</a>
     </section>
 
+    <!-- Bloc Fontionnement -->
     <section>
 
         <h2>Fonctionnement</h2>
@@ -34,19 +40,19 @@
 
             <div class="choix">
                 <div class="rond">1</div>
-                <i class="logo mobile"></i>
+                <i class="fas fa-mobile-alt"></i>
                 <p>Choisissez un restaurnt</p>
             </div>
 
             <div class="compo">
                 <div class="rond">2</div>
-                <i class="logo liste"></i>
+                <i class="fas fa-list-ul"></i>
                 <p>Choisissez un restaurnt</p>
             </div>
 
             <div class="degust">
                 <div class="rond">3</div>
-                <i class="logo resto"></i>
+                <i class="fas fa-store"></i>
                 <p>Choisissez un restaurnt</p>
             </div>
 
@@ -54,9 +60,13 @@
 
     </section>
 
+    <!-- liens des 4 restos -->
     <main>
+
         <h2>Restaurant</h2>
+
         <section>
+
             <div class="liensrestos">
                 
                 <a href="cartepalette">
@@ -66,7 +76,7 @@
                         <h3>La palette du gôut</h3>
                         <p>Ménilmontant</p>
                         <div class="coeur">
-                            <i class="logo coeur"></i>
+                            <i class="far fa-heart"></i>
                         </div>
                     </div>
                 </a>
@@ -78,7 +88,7 @@
                         <h3>La note enchantée</h3>
                         <p>Charonne</p>
                         <div class="coeur">
-                            <i class="logo coeur"></i>
+                            <i class="far fa-heart"></i>
                         </div>
                     </div>
                 </a>
@@ -90,7 +100,7 @@
                         <h3>À la française</h3>
                         <p>Cité rouge</p>
                         <div class="coeur">
-                            <i class="logo coeur"></i>
+                            <i class="far fa-heart"></i>
                         </div>
                     </div>
                 </a>
@@ -102,20 +112,22 @@
                         <h3>Le délice des sens</h3>
                         <p>Folie-Méricourt</p>
                         <div class="coeur">
-                            <i class="logo coeur"></i>
+                            <i class="far fa-heart"></i>
                         </div>
                     </div>
                 </a>
 
             </div>
+
         </section>
 
+        <!-- Pied de page -->
         <footer>
-            
+
             <p>ohmyfood</p>
             <ul>
-                <li><a href=""><i class="logo couverts"></i>Proposer un restaurant</a></li>
-                <li><a href=""><i class="logo mains"></i>Devenir partenaire</a></li>
+                <li><a href=""><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
+                <li><a href=""><i class="fas fa-hands-helping fa-xs"></i>Devenir partenaire</a></li>
                 <li><a href="">Mentions légales</a></li>
                 <li><a href="">Contact</a></li>
             </ul>

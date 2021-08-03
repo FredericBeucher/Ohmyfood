@@ -1,0 +1,91 @@
+@font-face {
+    font-family: "roboto";
+    src: url(polices/roboto.ttf);
+}
+  @font-face {
+    font-family: "shrikhand";
+    src: url(polices/shrikhand-regular.ttf);
+}
+html {
+    font-size: 100%;
+}
+* {
+    font-family: "roboto", sans-serif;
+}
+body {
+    margin: 0;
+}
+
+// Header commun à toutes les pages
+header nav h1 {
+    box-shadow: 0px 0px 10px #7c7c7c8c;
+    position: relative;
+    background-color:#fff;
+    font-family: "shrikhand", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+}
+
+.local {
+    background-color: #f1f1f1;
+        & h3 {
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 1rem;
+            margin: 0;
+                & .fas {
+                    padding-right: 0.5rem;
+        }
+    }
+}
+.reservez {
+    text-align: center;
+    background: #f7f7f7;
+    padding: 1rem;
+    & h2 {
+        font-weight: 800;
+        font-size: 1.6rem;
+    }
+    & p {
+        font-size: 1.4rem;
+    }
+    .btn {
+        display: block;
+        margin: 2rem auto;
+        width: 12rem;
+        background: linear-gradient(#ff79da, #9356dc);
+        padding: 1rem;
+        border-radius: 2rem;
+        text-decoration: none;
+        color: #fff;
+        box-shadow: 1px 2px 8px #7c7c7c8c;
+    }
+}
+
+footer {
+    padding: 1rem 0 1rem 2rem;
+    background: #1b1b1b;
+
+    & p {
+        font-family: "shrikhand", sans-serif;
+        font-size: 1.2rem;
+        color: #fff;
+    }
+
+    & ul {
+        padding-left: 0;
+        & li {
+        list-style-type: none;
+        & a {
+            text-decoration: none;
+            color: #fff;
+            line-height: 1.8rem;
+            & .fas {
+                margin-right: .5rem;
+            }
+        }
+        } 
+    }
+}

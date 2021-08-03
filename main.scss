@@ -28,6 +28,7 @@ header nav h1 {
     padding: 1rem;
 }
 
+// Emplacement du restaurant
 .local {
     background-color: #f1f1f1;
         & h3 {
@@ -40,6 +41,8 @@ header nav h1 {
         }
     }
 }
+
+// Présentation et bouton
 .reservez {
     text-align: center;
     background: #f7f7f7;
@@ -64,6 +67,60 @@ header nav h1 {
     }
 }
 
+// Fonctionnement
+.blocnotice {
+    padding: 2rem 2rem 2rem 2.5rem;
+    &__troisnotices {
+        &--notice {
+            background: #f7f7f7;
+            display: flex;
+            align-items: center;
+            border-radius: 1.5rem;
+            margin: 0 0 1.2rem;
+            height: 4.5rem;
+            box-shadow: 1px 2px 10px #7c7c7c8c;
+            transition: .2s ease-in-out;
+
+            & .rond {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                margin-left: -1rem;
+                background: #9356dc;
+                color: #fff;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 2rem;
+            }
+
+            & .fas {
+                display: flex;
+                position: absolute;
+                left: 4.5rem;
+                padding-right: 2rem;
+                color: #818181;
+                transition: .2s ease-in-out;
+            }
+            
+            & p {
+                position: absolute;
+                left: 7rem;
+                font-weight: bold;
+            }
+
+            &:hover {
+                background: #9256dc1a;
+                .fas {
+                    color:#9356dc;
+                }
+            }
+                        
+        }
+    }
+}
+
+// Footer commun à toutes les pages
 footer {
     padding: 1rem 0 1rem 2rem;
     background: #1b1b1b;

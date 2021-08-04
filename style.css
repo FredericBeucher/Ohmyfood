@@ -55,16 +55,18 @@ header nav h1 {
   font-size: 1.4rem;
 }
 .reservez .btn {
-  cursor: pointer;
+  display: inline-block;
   position: relative;
-  margin: 2rem auto;
-  width: 12rem;
+  cursor: pointer;
+  margin: 1rem 0 3rem 0;
+  width: 17rem;
   background: linear-gradient(#ff79da, #9356dc);
   padding: 1rem;
   border-radius: 2rem;
-  border: none;
   text-decoration: none;
   color: #fff;
+  font-size: 1.3rem;
+  font-weight: 400;
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
 }
 .reservez .btn:hover {
@@ -89,26 +91,28 @@ header nav h1 {
 .blocnotice {
   padding: 2rem 2rem 2rem 2.5rem;
 }
-.blocnotice__troisnotices--notice {
+.blocnotice h2 {
+  margin-left: -1rem;
+}
+.blocnotice .notice {
   background: #f7f7f7;
   display: flex;
   position: relative;
   align-items: center;
   border-radius: 1.5rem;
   margin: 0 0 1.2rem;
-  height: 4.5rem;
+  height: 5rem;
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
-  max-width: 100rem;
 }
-.blocnotice__troisnotices--notice:hover .fas {
+.blocnotice .notice:hover .fas {
   color: #9356dc;
   opacity: 1;
   transition: 0.2s;
 }
-.blocnotice__troisnotices--notice:hover::after {
+.blocnotice .notice:hover::after {
   opacity: 0.1;
 }
-.blocnotice__troisnotices--notice::after {
+.blocnotice .notice::after {
   content: "";
   position: absolute;
   top: 0;
@@ -120,7 +124,7 @@ header nav h1 {
   border-radius: 1.5rem;
   transition: 0.2s;
 }
-.blocnotice__troisnotices--notice .rond {
+.blocnotice .notice .rond {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,20 +136,71 @@ header nav h1 {
   height: 2rem;
   border-radius: 2rem;
 }
-.blocnotice__troisnotices--notice .fas {
+.blocnotice .notice .fas {
   position: absolute;
   left: 2.5rem;
   opacity: 0.5;
 }
-.blocnotice__troisnotices--notice p {
+.blocnotice .notice p {
   position: absolute;
   left: 5rem;
   font-weight: bold;
 }
 
+main {
+  background: #f7f7f7;
+  padding: 0 0.5rem 1.5rem 0.5rem;
+}
+main h2 {
+  padding-top: 3rem;
+  padding-left: 1.5rem;
+}
+
+.container {
+  padding-bottom: 1.5rem;
+}
+
+.carte {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 22rem;
+  margin: 1rem;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 15rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.piedcarte {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  background: #fff;
+  border-radius: 0 0 1.5rem 1.5rem;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.new {
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+  padding: 0.5rem 0.8rem;
+  background-color: #99e2d0;
+  color: #089270;
+  font-weight: bold;
+  border-radius: 0.15rem;
+}
+
 footer {
   padding: 1rem 0 1rem 2rem;
-  background: #1b1b1b;
+  background: #2b2b2b;
 }
 footer p {
   font-family: "shrikhand", sans-serif;
@@ -165,6 +220,20 @@ footer ul li a {
 }
 footer ul li a .fas {
   margin-right: 0.5rem;
+}
+
+@media screen and (min-width: 970px) {
+  .troisnotices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    column-gap: 3rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

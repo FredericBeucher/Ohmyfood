@@ -16,6 +16,59 @@ body {
     margin: 0;
 }
 
+// Loading
+$colorprimary:#9356dc;
+$colorsecondary: #ff79da;
+$colortertiary:#95e2d0;
+
+.screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: .9;
+    z-index: 1;
+    animation: screen 3s forwards 3.6s;
+    & .blocspinner {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+    .blocspinner>div {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        display: inline-block;
+        animation: balle 1.2s ease-in-out both 4;
+    }
+    .blocspinner .balle1 {
+        background: $colorprimary;
+    }
+    .blocspinner .balle2 {
+        animation-delay: .2s;
+        background: $colorsecondary;
+    }
+    .blocspinner .balle3 {
+        animation-delay: .4s;
+        background: $colortertiary;
+    }
+
+    @keyframes balle {
+        0%, 80%, 100% {
+            transform: scale(0);
+        }
+        40% {
+            transform: scale(1);
+        }
+    }
+    @keyframes screen {
+        to {
+            z-index: -999;
+        }
+}
+}
+
 // Header commun à toutes les pages
 header nav h1 {
     box-shadow: 0px 0px 10px #7c7c7c8c;
@@ -68,11 +121,9 @@ header nav h1 {
         font-size: 1.3rem;
         font-weight: 400;
         box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
-        &:hover {
+        &:hover::after {
             box-shadow: 1px 2px 10px rgba(0, 0, 0, .8);
-            &::after {
-                opacity: 0.3;
-            }
+            opacity: 0.3;
         }
         &::after {
             content:"";
@@ -165,6 +216,17 @@ main {
         }
 }
 
+.new {
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    padding: .5rem .8rem;
+    background-color: #99e2d0;
+    color: #089270;
+    font-weight: bold;
+    border-radius: .15rem;
+}
+
 .container {
     padding-bottom: 1.5rem;
 }
@@ -175,7 +237,6 @@ main {
     position: relative;
     height: 22rem;
     margin: 1rem;
-
 }
 
 img {
@@ -190,38 +251,55 @@ img {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 5rem;
+    height: 6rem;
     background: #fff;
     border-radius: 0 0 1.5rem 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: black;
+    h3 {
+        font-size:1.3rem;
+        max-width: 15rem;
+        margin: 1.1rem 0 0 1rem;
+        
+    }
+    p {
+        font-size:1.2rem;
+        max-width: 15rem;
+        margin: 0.8rem 0 0 1rem;
+    }
 }
 
-.new {
+// Animation du coeur
+.empty {
     position: absolute;
-    top: 1.2rem;
+    top: 2rem;
     right: 1rem;
-    padding: .5rem .8rem;
-    background-color: #99e2d0;
-    color: #089270;
-    font-weight: bold;
-    border-radius: .15rem;
+    font-size: 2rem;
+    margin: auto 1rem;
+
+    &:hover {
+        opacity: 0;
+        transition: all .2s;
+    }
 }
 
-.fa-heart {
-    color: #FFF;
-    background-color: #fff;
-    padding:.2em;
-    border: 1px solid black;
-}
-.fa-heart::before {
-    content: "\f004";
-    font-weight: bold;
-    transition: color 0.5s ease-out;
-}
-.fa-heart:hover::before{
-    color: red;
-    cursor: pointer;
+.full {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    font-size: 2rem;
+    margin: auto 1rem;
+    opacity: 0;
+    transition: .3s;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    &:hover {
+        opacity: 1;
+        transition: all .3s;
+        transform: scale(1.1);
+    }
 }
 
 // Footer commun à toutes les pages
@@ -264,6 +342,5 @@ footer {
     .container {
         display: grid;
         grid-template-columns: repeat(2, 2fr);
-
     }
 }

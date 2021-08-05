@@ -1,10 +1,11 @@
+@charset "UTF-8";
 @font-face {
   font-family: "roboto";
-  src: url(./polices/roboto.ttf);
+  src: url(polices/Roboto-Regular.ttf);
 }
 @font-face {
-  font-family: "shrikhand-regular";
-  src: url(./polices/shrikhand-regular.ttf);
+  font-family: "shrikhand";
+  src: url(polices/Shrikhand-Regular.ttf);
 }
 html {
   font-size: 100%;
@@ -22,7 +23,7 @@ header nav h1 {
   box-shadow: 0px 0px 10px #7c7c7c8c;
   position: relative;
   background-color: #fff;
-  font-family: "shrikhand-regular", sans-serif;
+  font-family: "shrikhand", sans-serif;
   font-size: 2rem;
   text-align: center;
   margin: 0;
@@ -198,12 +199,30 @@ img {
   border-radius: 0.15rem;
 }
 
+.fa-heart {
+  color: #FFF;
+  background-color: #fff;
+  padding: 0.2em;
+  border: 1px solid black;
+}
+
+.fa-heart::before {
+  content: "";
+  font-weight: bold;
+  transition: color 0.5s ease-out;
+}
+
+.fa-heart:hover::before {
+  color: red;
+  cursor: pointer;
+}
+
 footer {
   padding: 1rem 0 1rem 2rem;
   background: #2b2b2b;
 }
 footer p {
-  font-family: "shrikhand-regular", sans-serif;
+  font-family: "shrikhand", sans-serif;
   font-size: 1.2rem;
   color: #fff;
 }

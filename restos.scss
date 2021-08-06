@@ -51,6 +51,7 @@ header {
     width: 100%;
     position: relative;
     margin-top: -5rem;
+    padding-bottom: 1rem;
 }
 
 // Nom du resto et coeur
@@ -104,7 +105,8 @@ header {
 
 // Bloc d'un menu
 .blocmenu {
-    padding: 0 2rem;
+    margin: 0 2rem;
+    margin-top: -2rem;
     border: 1px solid black;
     h3 {
         font-weight: normal;
@@ -114,15 +116,72 @@ header {
 }
 // Bloc des trois plats
 .plat {
-    border: 1px solid red;
+    display: flex;
+    height: 4.5rem;
     border-radius: 1rem;
+    padding-left: 1rem;
     background: #fff;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
-    &__titre {
-        font-size: 1.5rem;
+    cursor: pointer;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.bloctexte {
+    display: block;
+}
+
+.titre {
+        margin: 0;
+        margin-top: 0.5rem;
+        font-size: 1.3rem;
         font-weight: bold;
-        padding-top: 0;
-    }
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+}
+
+.soustitre {
+    margin: 0;
+    margin-top: 0.5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.blochover {
+    display: flex;
+    justify-content: space-between;
+    width: 8rem;
+    margin-right: -5rem;
+}
+
+.blocprix {
+    position: relative;
+    width: 3rem;
+}
+
+.prix {
+    font-weight: bold;
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+}
+
+.bloccheck {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    background-color: #95e2d0;
+}
+
+.fa-check {
+    width: 1rem;
+    border-radius: 1rem;
+    color: #95e2d0;
+    background-color: #fff;
+    padding: .5rem;
 }
 
 // Bouton commander

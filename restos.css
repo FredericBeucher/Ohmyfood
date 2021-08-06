@@ -1,0 +1,175 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "roboto";
+  src: url(polices/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "shrikhand";
+  src: url(polices/Shrikhand-Regular.ttf);
+}
+html {
+  font-size: 100%;
+}
+
+* {
+  font-family: "roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+/* Header commun à toutes les pages resto */
+header .fa-arrow-left {
+  position: absolute;
+  top: 1.6rem;
+  left: 2rem;
+  font-size: 1.5rem;
+  color: black;
+}
+header nav h1 {
+  position: relative;
+  font-family: "shrikhand", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: normal;
+  margin: 0;
+  padding: 1rem 0 0 0;
+}
+header img {
+  width: 100%;
+  max-height: 30rem;
+  object-fit: cover;
+  position: relative;
+}
+
+.containermenu {
+  background: #f7f7f7;
+  border-radius: 2.5rem 2.5rem 0 0;
+  width: 100%;
+  position: relative;
+  margin-top: -5rem;
+}
+
+.nomresto {
+  margin: 0 2rem;
+}
+.nomresto h2 {
+  font-family: "shrikhand", sans-serif;
+  font-size: 1.8rem;
+  padding: 2rem 0;
+  font-weight: normal;
+}
+.nomresto .coeur {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+}
+.nomresto .coeur .empty {
+  position: absolute;
+  top: 2.5rem;
+  right: 1rem;
+  font-size: 2rem;
+}
+.nomresto .coeur .empty:hover {
+  opacity: 0;
+  transition: all 0.2s;
+}
+.nomresto .coeur .full {
+  position: absolute;
+  top: 2.5rem;
+  right: 1rem;
+  font-size: 2rem;
+  opacity: 0;
+  transition: 0.3s;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nomresto .coeur .full:hover {
+  opacity: 1;
+  transition: all 0.3s;
+  transform: scale(1.1);
+}
+
+.blocmenu {
+  padding: 0 2rem;
+  border: 1px solid black;
+}
+.blocmenu h3 {
+  font-weight: normal;
+  border-bottom: 3px solid #95e2d0;
+  width: 3rem;
+}
+
+.plat {
+  border: 1px solid red;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+}
+.plat__titre {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-top: 0;
+}
+
+main .btn {
+  text-align: center;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 15rem;
+  padding: 1rem 0;
+  margin: 3rem auto;
+  background: linear-gradient(#ff79da, #9356dc);
+  border-radius: 2rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+}
+main .btn:hover::after {
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.8);
+  opacity: 0.3;
+}
+main .btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.2s;
+  border-radius: 2rem;
+}
+
+footer {
+  padding: 1rem 0 1rem 2rem;
+  background: #2b2b2b;
+}
+footer p {
+  font-family: "shrikhand", sans-serif;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #fff;
+}
+footer ul {
+  padding-left: 0;
+}
+footer ul li {
+  list-style-type: none;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 1.8rem;
+}
+footer ul li a .fas {
+  margin-right: 0.5rem;
+}
+
+/*# sourceMappingURL=restos.css.map */

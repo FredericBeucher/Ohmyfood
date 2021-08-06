@@ -69,13 +69,14 @@ $colortertiary:#95e2d0;
 }
 }
 
-// Header commun à toutes les pages
+// Header
 header nav h1 {
     box-shadow: 0px 0px 10px #7c7c7c8c;
     position: relative;
     background-color:#fff;
     font-family: "shrikhand", sans-serif;
     font-size: 2rem;
+    font-weight:normal;
     text-align: center;
     margin: 0;
     padding: 1rem;
@@ -107,7 +108,7 @@ header nav h1 {
     & p {
         font-size: 1.4rem;
     }
-    .btn {
+    & div .btn {
         display: inline-block;
         position: relative;
         cursor: pointer;
@@ -310,6 +311,7 @@ footer {
     & p {
         font-family: "shrikhand", sans-serif;
         font-size: 1.2rem;
+        font-weight: normal;
         color: #fff;
     }
 
@@ -317,14 +319,14 @@ footer {
         padding-left: 0;
         & li {
         list-style-type: none;
-        & a {
-            text-decoration: none;
-            color: #fff;
-            line-height: 1.8rem;
-            & .fas {
-                margin-right: .5rem;
+            & a {
+                text-decoration: none;
+                color: #fff;
+                line-height: 1.8rem;
+                & .fas {
+                    margin-right: .5rem;
+                }
             }
-        }
         } 
     }
 }

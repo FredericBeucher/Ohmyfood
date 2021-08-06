@@ -4,7 +4,8 @@
   "description": "Projet OC. Dynamiser une application web.",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch main.scss:style.css"
+    "sass": "sass --watch main.scss:style.css",
+    "restosass": "sass --watch restos.scss:restos.css"
   },
   "author": "",
   "license": "ISC"

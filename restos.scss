@@ -113,9 +113,11 @@ header {
         border-bottom: 3px solid #95e2d0;
         width: 3rem;
     }
+    
 }
-// Bloc des trois plats
+// Bloc plat
 .plat {
+    position: relative;
     display: flex;
     height: 4.5rem;
     border-radius: 1rem;
@@ -125,20 +127,35 @@ header {
     cursor: pointer;
     justify-content: space-between;
     overflow: hidden;
+    margin-bottom: 1.5rem;
+    top: 0;
+    animation: blocmenu 1s ease-in-out;
+
+    &:hover .blochover {
+        margin-right: 0rem;
+        transition: .3s;
+    }
+    &:hover .fa-check {
+        transform: rotate(720deg);
+        transition: .4s;
+    }
 }
 
 .bloctexte {
     display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .titre {
-        margin: 0;
-        margin-top: 0.5rem;
-        font-size: 1.3rem;
-        font-weight: bold;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
+    margin: 0;
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .soustitre {
@@ -154,11 +171,13 @@ header {
     justify-content: space-between;
     width: 8rem;
     margin-right: -5rem;
+    transition: .3s ease-in-out;
 }
 
 .blocprix {
     position: relative;
     width: 3rem;
+    z-index: 2;
 }
 
 .prix {
@@ -182,8 +201,19 @@ header {
     color: #95e2d0;
     background-color: #fff;
     padding: .5rem;
+    transform: rotate(0deg);
+    transition: .4s;
 }
 
+@keyframes blocmenu {
+    0% {
+        opacity: 0;
+        top: 2rem;
+    }
+    50% {
+        opacity: 0;
+    }
+}
 // Bouton commander
 main .btn {
     text-align: center;

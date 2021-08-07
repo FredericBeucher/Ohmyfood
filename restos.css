@@ -105,6 +105,7 @@ header img {
 }
 
 .plat {
+  position: relative;
   display: flex;
   height: 4.5rem;
   border-radius: 1rem;
@@ -114,10 +115,24 @@ header img {
   cursor: pointer;
   justify-content: space-between;
   overflow: hidden;
+  margin-bottom: 1.5rem;
+  top: 0;
+  animation: blocmenu 1s ease-in-out;
+}
+.plat:hover .blochover {
+  margin-right: 0rem;
+  transition: 0.3s;
+}
+.plat:hover .fa-check {
+  transform: rotate(720deg);
+  transition: 0.4s;
 }
 
 .bloctexte {
   display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .titre {
@@ -143,11 +158,13 @@ header img {
   justify-content: space-between;
   width: 8rem;
   margin-right: -5rem;
+  transition: 0.3s ease-in-out;
 }
 
 .blocprix {
   position: relative;
   width: 3rem;
+  z-index: 2;
 }
 
 .prix {
@@ -171,8 +188,19 @@ header img {
   color: #95e2d0;
   background-color: #fff;
   padding: 0.5rem;
+  transform: rotate(0deg);
+  transition: 0.4s;
 }
 
+@keyframes blocmenu {
+  0% {
+    opacity: 0;
+    top: 2rem;
+  }
+  50% {
+    opacity: 0;
+  }
+}
 main .btn {
   text-align: center;
   display: block;

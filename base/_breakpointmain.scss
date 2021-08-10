@@ -1,0 +1,14 @@
+@media screen and (min-width: 970px) {
+    
+    .troisnotices {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        position: relative;
+        column-gap: 3rem;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+    }
+}

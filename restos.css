@@ -9,6 +9,7 @@
 }
 html {
   font-size: 100%;
+  box-sizing: border-box;
 }
 
 * {
@@ -20,13 +21,6 @@ body {
 }
 
 /* Header commun à toutes les pages resto */
-header .fa-arrow-left {
-  position: absolute;
-  top: 1.6rem;
-  left: 2rem;
-  font-size: 1.5rem;
-  color: black;
-}
 header nav h1 {
   position: relative;
   font-family: "shrikhand", sans-serif;
@@ -43,6 +37,14 @@ header img {
   position: relative;
 }
 
+.fa-arrow-left {
+  position: absolute;
+  top: 1.6rem;
+  left: 2rem;
+  font-size: 1.5rem;
+  color: #000;
+}
+
 .containermenu {
   background: #f7f7f7;
   border-radius: 2.5rem 2.5rem 0 0;
@@ -53,7 +55,7 @@ header img {
 }
 
 .troismenus {
-  margin: 0 1rem;
+  margin: 0 1rem 0 1rem;
 }
 
 .nomresto {
@@ -73,9 +75,10 @@ header img {
 }
 .nomresto .coeur .empty {
   position: absolute;
-  top: 2.5rem;
+  top: 2rem;
   right: 1rem;
   font-size: 2rem;
+  margin: auto 1rem;
 }
 .nomresto .coeur .empty:hover {
   opacity: 0;
@@ -83,9 +86,10 @@ header img {
 }
 .nomresto .coeur .full {
   position: absolute;
-  top: 2.5rem;
+  top: 2rem;
   right: 1rem;
   font-size: 2rem;
+  margin: auto 1rem;
   opacity: 0;
   transition: 0.3s;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
@@ -100,6 +104,7 @@ header img {
 
 .blocmenu {
   margin: 0 1rem;
+  padding-bottom: 0.1rem;
 }
 .blocmenu h3 {
   font-weight: normal;
@@ -217,7 +222,7 @@ header img {
   transition: 0.5s ease-in;
 }
 
-main .btn {
+.btn {
   text-align: center;
   display: block;
   position: relative;
@@ -233,11 +238,11 @@ main .btn {
   font-weight: 400;
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
 }
-main .btn:hover::after {
+.btn:hover::after {
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.8);
   opacity: 0.3;
 }
-main .btn::after {
+.btn::after {
   content: "";
   position: absolute;
   top: 0;
@@ -252,7 +257,7 @@ main .btn::after {
 
 footer {
   padding: 1rem 0 1rem 2rem;
-  background: #2b2b2b;
+  background: #000;
 }
 footer p {
   font-family: "shrikhand", sans-serif;

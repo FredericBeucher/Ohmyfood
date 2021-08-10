@@ -1,0 +1,32 @@
+.btn {
+    text-align: center;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 15rem;
+    padding: 1rem 0;
+    margin: 3rem auto;
+    background: linear-gradient($colorsecondary, $colorprimary);
+    border-radius: 2rem;
+    text-decoration: none;
+    color: $colorwhite;
+    font-size: 1.3rem;
+    font-weight: 400;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+        &:hover::after {
+            box-shadow: 1px 2px 10px rgba(0, 0, 0, .8);
+            opacity: 0.3;
+        }
+        &::after {
+            content:"";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: $colorwhite;
+            opacity: 0;
+            transition: opacity .2s;
+            border-radius: 2rem;
+        }
+}

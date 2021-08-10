@@ -1,0 +1,12 @@
+.local {
+    background-color: $colorbglocation;
+        & h3 {
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 1rem;
+            margin: 0;
+                & .fas {
+                    padding-right: 0.5rem;
+        }
+    }
+}

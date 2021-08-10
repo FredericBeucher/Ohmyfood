@@ -1,0 +1,47 @@
+.screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: $colorwhite;
+    opacity: .9;
+    z-index: 1;
+    animation: screen 3s forwards 3.6s;
+    & .blocspinner {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+    .blocspinner>div {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        display: inline-block;
+        animation: balle 1.2s ease-in-out both 4;
+    }
+    .blocspinner .balle1 {
+        background: $colorprimary;
+    }
+    .blocspinner .balle2 {
+        animation-delay: .2s;
+        background: $colorsecondary;
+    }
+    .blocspinner .balle3 {
+        animation-delay: .4s;
+        background: $colortertiary;
+    }
+
+    @keyframes balle {
+        0%, 80%, 100% {
+            transform: scale(0);
+        }
+        40% {
+            transform: scale(1);
+        }
+    }
+    @keyframes screen {
+        to {
+            z-index: -999;
+        }
+    }
+}

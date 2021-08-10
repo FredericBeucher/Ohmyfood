@@ -1,52 +1,14 @@
-@font-face {
-    font-family: "roboto";
-    src: url(polices/Roboto-Regular.ttf);
-}
-@font-face {
-    font-family: "shrikhand";
-    src: url(polices/Shrikhand-Regular.ttf);
-}
-html {
-    font-size: 100%;
-}
-  
-* {
-    font-family: "roboto", sans-serif;
-}
-  
-body {
-    margin: 0;
-}
+@import "./base/_base";
 
+@import "./utils/colors";
 /* Header commun à toutes les pages resto */
-header {
-    .fa-arrow-left {
-        position: absolute;
-        top: 1.6rem;
-        left: 2rem;
-        font-size: 1.5rem;
-        color: black;
-    }
-    & nav h1 {
-    position: relative;
-    font-family: "shrikhand", sans-serif;
-    font-size: 2rem;
-    text-align: center;
-    font-weight:normal;
-    margin: 0;
-    padding: 1rem 0 0 0;
-    }
-    img {
-        width: 100%;
-        max-height: 30rem;
-        object-fit: cover;
-        position: relative;
-    }
-}
+@import "./layouts/headerrestos";
+
+@import "./components/arrow";
 
 // Background du main
 .containermenu {
-    background: #f7f7f7;
+    background: $colorbggreynormal;
     border-radius: 2.5rem 2.5rem 0 0;
     width: 100%;
     position: relative;
@@ -54,7 +16,7 @@ header {
     padding-bottom: 1rem;
 }
 .troismenus {
-    margin: 0 1rem;
+    margin: 0 1rem 0 1rem;
 }
 
 // Nom du resto et coeur
@@ -75,44 +37,17 @@ header {
             top: 0;
             right: 1rem;
 
-            .empty {
-                position: absolute;
-                top: 2.5rem;
-                right: 1rem;
-                font-size: 2rem;
-                
-                &:hover {
-                    opacity: 0;
-                transition: all .2s;
-                }
-            }
-        
-            .full {
-                position: absolute;
-                top: 2.5rem;
-                right: 1rem;
-                font-size: 2rem;
-                opacity: 0;
-                transition: .3s;
-                background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                
-                &:hover {
-                    opacity: 1;
-                    transition: all .3s;
-                    transform: scale(1.1);
-                }
-            }
+            @import "./components/heart";
         }
 }
 
 // Bloc d'un menu
 .blocmenu {
     margin: 0 1rem;
+    padding-bottom: .1rem;
     h3 {
         font-weight: normal;
-        border-bottom: 3px solid #95e2d0;
+        border-bottom: 3px solid $colortertiary;
         width: 3rem;
     }
 }
@@ -134,8 +69,8 @@ header {
     height: 4.5rem;
     border-radius: 1rem;
     padding-left: 1rem;
-    background: #fff;
-    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+    background: $colorwhite;
+    box-shadow: 1px 2px 10px $colorshadow;
     cursor: pointer;
     justify-content: space-between;
     overflow: hidden;
@@ -215,84 +150,20 @@ header {
     align-items: center;
     justify-content: center;
     width: 5rem;
-    background-color: #95e2d0;
+    background-color: $colortertiary;
 }
 
 .fa-check {
     width: 1rem;
     border-radius: 1rem;
-    color: #95e2d0;
-    background-color: #fff;
+    color: $colortertiary;
+    background-color: $colorwhite;
     padding: .5rem;
     transform: rotate(0deg);
     transition: .5s ease-in;
 }
 
-// Bouton commander
-main .btn {
-    text-align: center;
-    display: block;
-    position: relative;
-    cursor: pointer;
-    width: 15rem;
-    padding: 1rem 0;
-    margin: 3rem auto;
-    background: linear-gradient(#ff79da, #9356dc);
-    border-radius: 2rem;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.3rem;
-    font-weight: 400;
-    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
-    &:hover::after {
-        box-shadow: 1px 2px 10px rgba(0, 0, 0, .8);
-        opacity: 0.3;
-    }
-    &::after {
-        content:"";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: #fff;
-        opacity: 0;
-        transition: opacity .2s;
-        border-radius: 2rem;
-    }
-}
-// Footer commun à toutes les pages
-footer {
-    padding: 1rem 0 1rem 2rem;
-    background: #2b2b2b;
+@import "./components/buttonrestos";
+@import "./layouts/footer";
 
-    & p {
-        font-family: "shrikhand", sans-serif;
-        font-size: 1.2rem;
-        font-weight: normal;
-        color: #fff;
-    }
-
-    & ul {
-        padding-left: 0;
-        & li {
-        list-style-type: none;
-        & a {
-            text-decoration: none;
-            color: #fff;
-            line-height: 1.8rem;
-            & .fas {
-                margin-right: .5rem;
-            }
-        }
-        } 
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    
-    .troismenus {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+@import "./base/breakpointresto";

@@ -1,0 +1,31 @@
+.empty {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    font-size: 2rem;
+    margin: auto 1rem;
+
+    &:hover {
+        opacity: 0;
+        transition: all .2s;
+    }
+}
+
+.full {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    font-size: 2rem;
+    margin: auto 1rem;
+    opacity: 0;
+    transition: .3s;
+    background: -webkit-gradient(linear, left top, left bottom, from($colorprimary), to($colorsecondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    &:hover {
+        opacity: 1;
+        transition: all .3s;
+        transform: scale(1.1);
+    }
+}

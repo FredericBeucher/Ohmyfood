@@ -1,0 +1,31 @@
+.btn {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin: 1rem 0 3rem 0;
+    width: 17rem;
+    background: linear-gradient($colorsecondary, $colorprimary);
+    padding: 1rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: $colorwhite;
+    font-size: 1.3rem;
+    font-weight: 400;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+    &:hover::after {
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, .8);
+        opacity: 0.3;
+    }
+    &::after {
+        content:"";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $colorwhite;
+        opacity: 0;
+        transition: opacity .2s;
+        border-radius: 2rem;
+    }
+}

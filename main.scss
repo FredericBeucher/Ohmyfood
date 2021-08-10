@@ -1,145 +1,18 @@
-@font-face {
-    font-family: "roboto";
-    src: url(polices/Roboto-Regular.ttf);
-}
-@font-face {
-    font-family: "shrikhand";
-    src: url(polices/Shrikhand-Regular.ttf);
-}
-html {
-    font-size: 100%;
-}
-* {
-    font-family: "roboto", sans-serif;
-}
-body {
-    margin: 0;
-}
+@import "./base/_base";
 
-// Loading
-$colorprimary:#9356dc;
-$colorsecondary: #ff79da;
-$colortertiary:#95e2d0;
+@import "./utils/colors";
 
-.screen {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    opacity: .9;
-    z-index: 1;
-    animation: screen 3s forwards 3.6s;
-    & .blocspinner {
-        position: absolute;
-        top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
-
-    }
-    .blocspinner>div {
-        width: 1.5rem;
-        height: 1.5rem;
-        border-radius: 50%;
-        display: inline-block;
-        animation: balle 1.2s ease-in-out both 4;
-    }
-    .blocspinner .balle1 {
-        background: $colorprimary;
-    }
-    .blocspinner .balle2 {
-        animation-delay: .2s;
-        background: $colorsecondary;
-    }
-    .blocspinner .balle3 {
-        animation-delay: .4s;
-        background: $colortertiary;
-    }
-
-    @keyframes balle {
-        0%, 80%, 100% {
-            transform: scale(0);
-        }
-        40% {
-            transform: scale(1);
-        }
-    }
-    @keyframes screen {
-        to {
-            z-index: -999;
-        }
-}
-}
+@import "./pages/screenspinner";
 
 // Header
-header nav h1 {
-    box-shadow: 0px 0px 10px #7c7c7c8c;
-    position: relative;
-    background-color:#fff;
-    font-family: "shrikhand", sans-serif;
-    font-size: 2rem;
-    font-weight:normal;
-    text-align: center;
-    margin: 0;
-    padding: 1rem;
-}
+@import "./layouts/headermain";
 
 // Emplacement du restaurant
-.local {
-    background-color: #f1f1f1;
-        & h3 {
-            font-size: 1.2rem;
-            text-align: center;
-            padding: 1rem;
-            margin: 0;
-                & .fas {
-                    padding-right: 0.5rem;
-        }
-    }
-}
+@import "./pages/localisation";
 
 // Présentation et bouton
-.reservez {
-    text-align: center;
-    background: #f7f7f7;
-    padding: 1rem;
-    & h2 {
-        font-weight: 800;
-        font-size: 1.6rem;
-    }
-    & p {
-        font-size: 1.4rem;
-    }
-    & div .btn {
-        display: inline-block;
-        position: relative;
-        cursor: pointer;
-        margin: 1rem 0 3rem 0;
-        width: 17rem;
-        background: linear-gradient(#ff79da, #9356dc);
-        padding: 1rem;
-        border-radius: 2rem;
-        text-decoration: none;
-        color: #fff;
-        font-size: 1.3rem;
-        font-weight: 400;
-        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
-        &:hover::after {
-            box-shadow: 1px 2px 10px rgba(0, 0, 0, .8);
-            opacity: 0.3;
-        }
-        &::after {
-            content:"";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: #fff;
-            opacity: 0;
-            transition: opacity .2s;
-            border-radius: 2rem;
-        }
-    }
-}
+@import "./pages/intromain";
+@import "./components/buttonmain";
 
 // Fonctionnement
 .blocnotice {
@@ -148,17 +21,17 @@ header nav h1 {
         margin-left: -1rem;
     }
         .notice {
-            background: #f7f7f7;
+            background: $colorbggreynormal;
             display: flex;
             position: relative;
             align-items: center;
             border-radius: 1.5rem;
             margin: 0 0 1.2rem;
             height: 5rem;
-            box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 1px 2px 10px $colorshadow;
             &:hover {
                 .fas {
-                    color:#9356dc;
+                    color:$colorprimary;
                     opacity: 1;
                     transition: .2s;
                 }
@@ -174,7 +47,7 @@ header nav h1 {
                 right: 0;
                 bottom: 0;
                 left: 0;
-                background-color: #9356dc;
+                background-color: $colorprimary;
                 opacity: 0;
                 border-radius: 1.5rem;
                 transition: .2s;
@@ -186,8 +59,8 @@ header nav h1 {
                 justify-content: center;
                 position: absolute;
                 margin-left: -1rem;
-                background: #9356dc;
-                color: #fff;
+                background: $colorprimary;
+                color: $colorwhite;
                 width: 2rem;
                 height: 2rem;
                 border-radius: 2rem;
@@ -209,7 +82,7 @@ header nav h1 {
 
 // Cartes des restaurants
 main {
-    background:#f7f7f7;
+    background:$colorbggreynormal;
     padding: 0 .5rem 1.5rem .5rem;
         h2 {
             padding-top: 3rem;
@@ -221,10 +94,10 @@ main {
     position: absolute;
     top: 1.2rem;
     right: 1rem;
-    padding: .5rem .8rem;
-    background-color: $colortertiary;
-    color:#008868;
+    color: $colornouveau;
     font-weight: bold;
+    background-color: $colortertiary;
+    padding: .5rem .8rem;
     border-radius: .15rem;
 }
 
@@ -253,10 +126,10 @@ img {
     bottom: 0;
     width: 100%;
     height: 6rem;
-    background: #fff;
+    background: $colorwhite;
     border-radius: 0 0 1.5rem 1.5rem;
     margin-bottom: 1rem;
-    color: black;
+    color: $colortext;
     h3 {
         font-size:1.3rem;
         max-width: 15rem;
@@ -271,78 +144,10 @@ img {
 }
 
 // Animation du coeur
-.empty {
-    position: absolute;
-    top: 2rem;
-    right: 1rem;
-    font-size: 2rem;
-    margin: auto 1rem;
-
-    &:hover {
-        opacity: 0;
-        transition: all .2s;
-    }
-}
-
-.full {
-    position: absolute;
-    top: 2rem;
-    right: 1rem;
-    font-size: 2rem;
-    margin: auto 1rem;
-    opacity: 0;
-    transition: .3s;
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-    &:hover {
-        opacity: 1;
-        transition: all .3s;
-        transform: scale(1.1);
-    }
-}
+@import "./components/heart";
 
 // Footer commun à toutes les pages
-footer {
-    padding: 1rem 0 1rem 2rem;
-    background: #2b2b2b;
-
-    & p {
-        font-family: "shrikhand", sans-serif;
-        font-size: 1.2rem;
-        font-weight: normal;
-        color: #fff;
-    }
-
-    & ul {
-        padding-left: 0;
-        & li {
-        list-style-type: none;
-            & a {
-                text-decoration: none;
-                color: #fff;
-                line-height: 1.8rem;
-                & .fas {
-                    margin-right: .5rem;
-                }
-            }
-        } 
-    }
-}
+@import "./layouts/footer";
 
 // Breakpoint Tablette et Desktop
-@media screen and (min-width: 970px) {
-    
-    .troisnotices {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        position: relative;
-        column-gap: 3rem;
-    }
-    
-    .container {
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-    }
-}
+@import "./base/breakpointmain";

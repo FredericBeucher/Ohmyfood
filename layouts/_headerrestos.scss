@@ -1,0 +1,17 @@
+header {
+    & nav h1 {
+        position: relative;
+        font-family: "shrikhand", sans-serif;
+        font-size: 2rem;
+        text-align: center;
+        font-weight:normal;
+        margin: 0;
+        padding: 1rem 0 0 0;
+    }
+    img {
+        width: 100%;
+        max-height: 30rem;
+        object-fit: cover;
+        position: relative;
+    }
+}

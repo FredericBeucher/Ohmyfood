@@ -1,0 +1,26 @@
+footer {
+    padding: 1rem 0 1rem 2rem;
+    background: $colortext;
+
+    & p {
+        font-family: "shrikhand", sans-serif;
+        font-size: 1.2rem;
+        font-weight: normal;
+        color: $colorwhite;
+    }
+
+    & ul {
+        padding-left: 0;
+        & li {
+        list-style-type: none;
+            & a {
+                text-decoration: none;
+                color: $colorwhite;
+                line-height: 1.8rem;
+                & .fas {
+                    margin-right: .5rem;
+                }
+            }
+        } 
+    }
+}

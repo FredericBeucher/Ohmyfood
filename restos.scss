@@ -14,80 +14,41 @@
     position: relative;
     margin-top: -5rem;
     padding-bottom: 1rem;
-}
-.troismenus {
-    margin: 0 1rem 0 1rem;
+        .troismenus {
+            margin: 0 .5rem;
+                .blocmenu {
+                    margin: 0 1rem;
+                    padding-bottom: .1rem;
+                    padding-right: .5rem;
+                    padding-left: .5rem;
+                    overflow:hidden;
+                        h3 {
+                            font-weight: normal;
+                            border-bottom: 3px solid $colortertiary;
+                            width: 3rem;
+                        }
+                }
+        }
 }
 
 // Nom du resto et coeur
-.nomresto {
-    margin: 0 2rem;
-
-        h2 {
-            font-family: "shrikhand", sans-serif;
-            font-size: 1.8rem;
-            padding-top: 2rem;
-            padding-right: 2rem;
-            font-weight: normal;
-        }
+@import "./pages/restoname";
 
         // Animation du coeur
-        .coeur {
-            position: absolute;
-            top: 0;
-            right: 1rem;
+.coeur {
+    position: absolute;
+    top: 0;
+    right: 1rem;
 
-            @import "./components/heart";
-        }
+    @import "./components/heart";
 }
 
 // Bloc d'un menu
-.blocmenu {
-    margin: 0 1rem;
-    padding-bottom: .1rem;
-    h3 {
-        font-weight: normal;
-        border-bottom: 3px solid $colortertiary;
-        width: 3rem;
-    }
-}
 // Bloc plat
-@keyframes blocmenu {
-    0% {
-        opacity: 0;
-        top: 2rem;
-    }
-    
-    100% {
-        opacity: 1;
-    }
+@import "./utils/keyframesblocmenu";
 
-}
-.plat,.platun {
-    position: relative;
-    display: flex;
-    height: 4.5rem;
-    border-radius: 1rem;
-    padding-left: 1rem;
-    background: $colorwhite;
-    box-shadow: 1px 2px 10px $colorshadow;
-    cursor: pointer;
-    justify-content: space-between;
-    overflow: hidden;
-    margin-bottom: 1.5rem;
-    top: 0;
-    opacity: 0;
-    animation: blocmenu .4s cubic-bezier(.36,.68,.49,1.29) forwards 1s;
+@import "./layouts/blocplat";
 
-    &:hover .blochover {
-        margin-right: 0rem;
-        transition: transform .4s ease-in-out forwards;
-    }
-    &:hover .fa-check {
-        transform: rotate(720deg);
-        transition: .6s;
-    }
-}
 .platdeux {
     animation-delay: 1.2s;
 }
@@ -96,71 +57,6 @@
 }
 .platquatre {
     animation-delay: 1.6s;
-}
-
-
-.bloctexte {
-    display: block;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.titre {
-    margin: 0;
-    margin-top: 0.5rem;
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.soustitre {
-    margin: 0;
-    margin-top: 0.5rem;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.blochover {
-    display: flex;
-    justify-content: space-between;
-    width: 8rem;
-    margin-right: -5rem;
-    transition: .4s ease-in-out;
-}
-
-.blocprix {
-    position: relative;
-    width: 3rem;
-    margin-left: .5rem;
-}
-
-.prix {
-    font-weight: bold;
-    position: absolute;
-    top: 1.55rem;
-    left: 0;
-}
-
-.bloccheck {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 5rem;
-    background-color: $colortertiary;
-}
-
-.fa-check {
-    width: 1rem;
-    border-radius: 1rem;
-    color: $colortertiary;
-    background-color: $colorwhite;
-    padding: .5rem;
-    transform: rotate(0deg);
-    transition: .5s ease-in;
 }
 
 @import "./components/buttonrestos";

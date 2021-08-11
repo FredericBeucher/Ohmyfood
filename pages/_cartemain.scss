@@ -1,0 +1,38 @@
+.carte {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 22rem;
+    margin: 1rem;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 15rem;
+        border-radius: 1.5rem 1.5rem 0 0;
+    }
+
+    .piedcarte {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 6rem;
+        background: $colorwhite;
+        border-radius: 0 0 1.5rem 1.5rem;
+        margin-bottom: 1rem;
+        color: $colortext;
+
+            h3 {
+            font-size:1.3rem;
+            max-width: 15rem;
+            margin: 1.1rem 0 0 1rem;
+            }
+
+            p {
+            font-size:1.2rem;
+            max-width: 15rem;
+            margin: 0.8rem 0 0 1rem;
+            }
+    }
+}

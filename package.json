@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch main.scss:style.css",
-    "restosass": "sass --watch restos.scss:restos.css"
+    "restosass": "sass --watch restos.scss:restos.css",
+    "prefix": "postcss style.css --use autoprefixer -d css/prefixed/"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "browserslist": "last 4 versions"
 }

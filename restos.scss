@@ -1,9 +1,6 @@
 @import "./base/_base";
-
 @import "./utils/colors";
-/* Header commun à toutes les pages resto */
 @import "./layouts/headerrestos";
-
 @import "./components/arrow";
 
 // Background du main
@@ -31,10 +28,9 @@
         }
 }
 
-// Nom du resto et coeur
 @import "./pages/restoname";
 
-        // Animation du coeur
+// Animation du coeur
 .coeur {
     position: absolute;
     top: 0;
@@ -43,12 +39,10 @@
     @import "./components/heart";
 }
 
-// Bloc d'un menu
-// Bloc plat
 @import "./utils/keyframesblocmenu";
-
 @import "./layouts/blocplat";
 
+// Délai des plats
 .platdeux {
     animation-delay: 1.2s;
 }
@@ -61,5 +55,4 @@
 
 @import "./components/buttonrestos";
 @import "./layouts/footer";
-
 @import "./base/breakpointresto";

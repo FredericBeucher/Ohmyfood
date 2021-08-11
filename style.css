@@ -264,9 +264,10 @@ main .container .carte .piedcarte p {
 }
 
 .full {
+  padding: 0.1rem;
   position: absolute;
-  top: 2rem;
-  right: 1rem;
+  top: 1.9rem;
+  right: 0.9rem;
   font-size: 2rem;
   margin: auto 1rem;
   opacity: 0;

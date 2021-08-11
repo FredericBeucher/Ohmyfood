@@ -16,13 +16,12 @@
 
     &:hover .blochover {
         margin-right: 0rem;
-        transition: transform .4s ease-in-out forwards;
+        transition: .4s ease-in-out;
     }
     &:hover .fa-check {
         transform: rotate(720deg);
         transition: .6s;
     }
-    
     
     .bloctexte {
         display: block;

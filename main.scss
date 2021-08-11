@@ -1,20 +1,10 @@
 @import "./base/_base";
-
 @import "./utils/colors";
-
 @import "./pages/screenspinner";
-
-// Header
 @import "./layouts/headermain";
-
-// Emplacement du restaurant
 @import "./pages/localisation";
-
-// Présentation et bouton
 @import "./pages/intromain";
 @import "./components/buttonmain";
-
-// Fonctionnement
 @import "./pages/blocnotice";
 
 // Cartes des restaurants
@@ -35,11 +25,6 @@ main {
     }
 }
     
-// Animation du coeur
 @import "./components/heart";
-
-// Footer commun à toutes les pages
 @import "./layouts/footer";
-
-// Breakpoint Tablette et Desktop
 @import "./base/breakpointmain";

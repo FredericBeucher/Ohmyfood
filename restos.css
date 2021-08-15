@@ -19,6 +19,7 @@ body {
   margin: 0;
 }
 
+/* Header ohmyfood */
 header nav h1 {
   position: relative;
   font-family: "shrikhand", sans-serif;
@@ -35,6 +36,7 @@ header img {
   position: relative;
 }
 
+/* Flêche de retour */
 .fa-arrow-left {
   position: absolute;
   top: 1.6rem;
@@ -43,6 +45,7 @@ header img {
   color: #000;
 }
 
+/* Container Nom, Entrées, Plats, Desserts */
 .containermenu {
   background: #f7f7f7;
   border-radius: 2.5rem 2.5rem 0 0;
@@ -51,6 +54,8 @@ header img {
   margin-top: -5rem;
   padding-bottom: 1rem;
 }
+
+/* Container des 3 parties du menu */
 .containermenu .troismenus {
   margin: 0 0.5rem;
 }
@@ -78,6 +83,7 @@ header img {
   font-weight: normal;
 }
 
+/* Icone Coeur */
 .coeur {
   position: absolute;
   top: 0;
@@ -110,9 +116,10 @@ header img {
 .coeur .full:hover {
   opacity: 1;
   transition: all 0.3s;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
+/* Animation d'apparition de chaque plat */
 @keyframes blocmenu {
   0% {
     opacity: 0;
@@ -122,6 +129,7 @@ header img {
     opacity: 1;
   }
 }
+
 .plat {
   position: relative;
   display: flex;
@@ -146,6 +154,7 @@ header img {
   transform: rotate(720deg);
   transition: 0.6s;
 }
+
 .plat .bloctexte {
   display: block;
   float: none;
@@ -153,6 +162,7 @@ header img {
   overflow: hidden;
   white-space: nowrap;
 }
+
 .plat .titre {
   margin: 0;
   margin-top: 0.5rem;
@@ -162,6 +172,7 @@ header img {
   overflow: hidden;
   white-space: nowrap;
 }
+
 .plat .soustitre {
   margin: 0;
   margin-top: 0.5rem;
@@ -169,6 +180,7 @@ header img {
   overflow: hidden;
   white-space: nowrap;
 }
+
 .plat .blochover {
   display: flex;
   justify-content: space-between;
@@ -176,17 +188,20 @@ header img {
   margin-right: -5rem;
   transition: 0.4s ease-in-out;
 }
+
 .plat .blocprix {
   position: relative;
   width: 3rem;
   margin-left: 0.5rem;
 }
+
 .plat .prix {
   font-weight: bold;
   position: absolute;
   top: 1.55rem;
   left: 0;
 }
+
 .plat .bloccheck {
   display: flex;
   align-items: center;
@@ -194,6 +209,7 @@ header img {
   width: 5rem;
   background-color: #95e2d0;
 }
+
 .plat .fa-check {
   width: 1rem;
   border-radius: 1rem;
@@ -204,6 +220,7 @@ header img {
   transition: 0.6s ease-in;
 }
 
+/* Délais d'apparition des plats */
 .platdeux {
   animation-delay: 1.2s;
 }
@@ -216,6 +233,7 @@ header img {
   animation-delay: 1.6s;
 }
 
+/* Bouton Commander */
 .btn {
   text-align: center;
   display: block;
@@ -249,9 +267,10 @@ header img {
   border-radius: 2rem;
 }
 
+/* Pied de page */
 footer {
   padding: 1rem 0 1rem 2rem;
-  background: #000;
+  background: #1f1f1f;
 }
 footer p {
   font-family: "shrikhand", sans-serif;
@@ -274,7 +293,8 @@ footer ul li a .fas {
   margin-right: 0.5rem;
 }
 
-@media screen and (min-width: 1200px) {
+/* Breakpoint des pages Restos */
+@media screen and (min-width: 970px) {
   .troismenus {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

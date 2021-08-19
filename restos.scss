@@ -2,57 +2,13 @@
 @import "./utils/colors";
 @import "./layouts/headerrestos";
 @import "./components/arrow";
-
-// Background du main
-.containermenu {
-    background: $colorbggreynormal;
-    border-radius: 2.5rem 2.5rem 0 0;
-    width: 100%;
-    position: relative;
-    margin-top: -5rem;
-    padding-bottom: 1rem;
-        .troismenus {
-            margin: 0 .5rem;
-                .blocmenu {
-                    margin: 0 1rem;
-                    padding-bottom: .1rem;
-                    padding-right: .5rem;
-                    padding-left: .5rem;
-                    overflow:hidden;
-                        h3 {
-                            font-weight: normal;
-                            border-bottom: 3px solid $colortertiary;
-                            width: 3rem;
-                        }
-                }
-        }
-}
-
+@import "./pages/containermainresto";
 @import "./pages/restoname";
-
-// Animation du coeur
-.coeur {
-    position: absolute;
-    top: 0;
-    right: 1rem;
-
-    @import "./components/heart";
-}
-
+@import "./pages/heartresto";
+@import "./components/heart";
 @import "./utils/keyframesblocmenu";
 @import "./layouts/blocplat";
-
-// Délai des plats
-.platdeux {
-    animation-delay: 1.2s;
-}
-.plattrois {
-    animation-delay: 1.4s;
-}
-.platquatre {
-    animation-delay: 1.6s;
-}
-
+@import "./pages/animplatsresto";
 @import "./components/buttonrestos";
 @import "./layouts/footer";
 @import "./base/breakpointresto";

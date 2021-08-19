@@ -1,0 +1,16 @@
+main {
+    background:$colorbggreynormal;
+    padding: 0 .5rem 1.5rem .5rem;
+        h2 {
+            padding-top: 3rem;
+            padding-left: 1.5rem;
+        }
+    
+    @import "./components/new";
+    
+    .container {
+        padding-bottom: 1.5rem;
+        
+        @import "./pages/cartemain";
+    }
+}

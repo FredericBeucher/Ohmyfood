@@ -16,3 +16,11 @@ html {
 body {
     margin: 0;
 }
+.blocnotice, main {
+    max-width: 110rem;
+    margin:auto;
+}
+footer p, footer ul {
+    max-width: 110rem;
+    margin:auto;
+}

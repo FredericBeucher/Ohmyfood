@@ -269,7 +269,7 @@ main .container .carte .piedcarte p {
 .empty {
   position: absolute;
   top: 2rem;
-  right: 1rem;
+  right: 0rem;
   font-size: 2rem;
   margin: auto 1rem;
 }
@@ -284,7 +284,7 @@ main .container .carte .piedcarte p {
   top: 1.9rem;
   right: 0.9rem;
   font-size: 2rem;
-  margin: auto 1rem;
+  margin: auto auto 1rem 0rem;
   opacity: 0;
   transition: 0.3s;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));

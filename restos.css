@@ -45,6 +45,12 @@ header img {
   position: relative;
 }
 
+header nav h1 a {
+  text-decoration: none;
+  font-family: "shrikhand", sans-serif;
+  color: #000;
+}
+
 .fa-arrow-left {
   position: absolute;
   top: 1.6rem;

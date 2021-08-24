@@ -80,12 +80,17 @@ header nav h1 {
   box-shadow: 0px 0px 10px #7c7c7c8c;
   position: relative;
   background-color: #fff;
-  font-family: "shrikhand", sans-serif;
   font-size: 2rem;
   font-weight: normal;
   text-align: center;
   margin: 0;
   padding: 1rem;
+}
+
+header nav h1 a {
+  text-decoration: none;
+  font-family: "shrikhand", sans-serif;
+  color: #000;
 }
 
 .local {
